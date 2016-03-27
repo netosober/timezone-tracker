@@ -13,7 +13,8 @@ module.exports = function(environment) {
       }
     },
     moment: {
-      includeTimezone: 'all'
+      includeTimezone: 'all',
+       outputFormat: 'l hh:mm:ss a'
     },
 
     APP: {

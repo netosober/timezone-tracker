@@ -13,13 +13,13 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{time-zone-clock dateToDisplay=dateToDisplay}}`);
 
-  assert.equal(this.$().text().trim(), '12:00:00 am');
+  assert.equal(this.$().text().trim(), moment('2016-01-01 00:00:00').format("l hh:mm:ss a"));
 
   this.set('dateToDisplay', moment('2016-01-01 23:00:00'));
 
   this.render(hbs`{{time-zone-clock dateToDisplay=dateToDisplay}}`);
 
-  assert.equal(this.$().text().trim(), '11:00:00 pm');
+  assert.equal(this.$().text().trim(), moment('2016-01-01 23:00:00').format("l hh:mm:ss a"));
 
 
   this.set('dateToDisplay', moment('2016-01-01 12:00:00Z'));
@@ -27,7 +27,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{time-zone-clock dateToDisplay=dateToDisplay timeZone=timeZone}}`);
 
-  assert.equal(this.$().text().trim(), '04:00:00 am');
+  assert.equal(this.$().text().trim(), moment('2016-01-01 04:00:00').format("l hh:mm:ss a"));
 
 
 });
