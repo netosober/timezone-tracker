@@ -10,5 +10,8 @@ export default Ember.Route.extend({
         controller.set('currentDate', new Date());
       });
     }, 1000);
+  },
+  model() {
+    return this.store.findAll('member');
   }
 });

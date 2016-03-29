@@ -1,7 +1,23 @@
+$container-large-desktop:      970px;
 @import "bootstrap";
 @import "bootstrap/theme";
-
-
 .text-center {
   text-align: center;
+}
+
+.member {
+
+  .name {
+    font-size: $font-size-h1;
+    color: $brand-primary;
+    display: inline-block;
+  }
+  .location {
+
+  }
+  .time {
+    font-size: $font-size-h1;
+    float: right;
+    display: inline-block;
+  }
 }
